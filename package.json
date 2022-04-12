@@ -2,7 +2,7 @@
   "name": "javascript-course-master",
   "version": "1.0.0",
   "description": "",
-  "main": "variables_lesson.js",
+  "main": "lesson.js",
   "scripts": {
     "precompress": "{{ executes BEFORE the `compress` script }}",
     "compress": "{{ run command to compress files }}",
