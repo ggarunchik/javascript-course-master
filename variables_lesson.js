@@ -3,7 +3,7 @@ const x = 20
 const y = 58
 const z = 42
 
-let result = x + y + z
+const result = x + y + z
 
 console.log('TASK1: Result is: ' + result)
 
@@ -14,10 +14,9 @@ const hoursPerDay = 24
 const daysInYear = 365
 
 const calculateAgeIneconds = (age) => {
-    return console.log(
-        `TASK2: My age is' ${age} and in seconds this is: ${age * daysInYear * hoursPerDay * minutesInHour * secondsInMin}`)
+    console.log(`TASK2: My age is' ${age} and in seconds this is: ${age * daysInYear * hoursPerDay * minutesInHour * secondsInMin}`)
 }
-let myAgeInSeconds = calculateAgeIneconds(30)
+calculateAgeIneconds(30)
 
 //Task 3
 let count = 42
@@ -47,12 +46,12 @@ let lenghtResult = (word1 + word2 + word3 + word4 + word5).length
 console.log(`TASK5: Result is: ${lenghtResult}`)
 
 //Task 6
-var obj = {
+const obj = {
     firstValue: 1,
     secondValue: 'js',
     thierdValue: true
 }
-for (var i in obj) {
+for (let i in obj) {
     console.log(`TASK 6: Variable ${i} have type: ${typeof obj[i]}`)
 }
 
@@ -92,9 +91,7 @@ let pen = true
 let apple = false
 let orange = true
 
-let shouldGoToWork
-
-(key && documents && pen && apple || orange) ? shouldGoToWork = true : shouldGoToWork = false
+let shouldGoToWork = (key && documents && pen && apple || orange)
 console.log(`TASK 10: Should I go to work? ${shouldGoToWork}`)
 
 //Task 11
@@ -108,7 +105,7 @@ const isFizzBuzz = (num) => {
 isFizzBuzz(15)
 
 //Task 12
-const isAgeEnougnt = (age) => {
+const isAgeEnough = (age) => {
     if (age >= 16 && age <= 18) {
         console.log('TASK12: Можешь выкурить сигаретку, только маме не говори')
     } else if (age > 18) {
@@ -117,7 +114,7 @@ const isAgeEnougnt = (age) => {
         console.log('TASK12: Пей колу')
     }
 }
-isAgeEnougnt(15)
+isAgeEnough(15)
 
 //Task 13
 const desired = 'север'
