@@ -71,3 +71,29 @@ const isInteger = (number) => {
 isInteger(num)
 
 //Task 10
+const floatNumber = 7.6823
+let ceil = Math.ceil(floatNumber)
+let floor = Math.floor(floatNumber)
+let round = Math.round(floatNumber)
+
+//Task 12
+function exponentiate(number, expon) {
+    return Math.pow(number, expon)
+}
+
+//Task 13
+function getRandomFloat(min, max) {
+    return Math.random() * (max - min) + min
+}
+
+//Task 14
+function getRandomInt(min, max) {
+    min = Math.ceil(min)
+    max = Math.floor(max)
+    return Math.floor(Math.random() * (max - min)) + min
+}
+
+//Task 15
+let todayDate = new Date()
+
+console.log(`текущая дата: ${todayDate.getMonth()}/${todayDate.getFullYear()}/${todayDate.getDay()}. Текущее время ${todayDate.getHours()}:${todayDate.getMinutes()}:${todayDate.getSeconds()}.`)
