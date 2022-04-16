@@ -48,3 +48,47 @@ function boo() { console.log(boo.name) }
     return result
 })(6)
 
+//ADVANCED level
+//Task 1
+function isTriangle(a, b, c) {
+    if (a + b < c || a + c < b || b + c <= a)
+        return false
+    else
+        return true
+}
+
+//Task 2
+function splitChocolate(n, m) {
+    if ((n > 1 && m > 1) || (n > 1 && m == 1) || (n == 1 && m > 1))
+        return m * n - 1
+    else
+        return 0
+}
+
+//Task 3
+let balanceUSD = 10000
+const rate = 2
+const accessoriesPriceUSD = 60
+const phonePriceUSD = 1450
+
+function caclRate(price, rate) {
+    return price * rate / 100
+}
+
+function formatPriceTo(currency, price) {
+    let formattedPrice = price.toFixed(2)
+    return `${formattedPrice} ${currency}`
+}
+
+function buyPhones() {
+    let fullPrice = phonePriceUSD + accessoriesPriceUSD
+    let fullPriceWithRate = fullPrice + caclRate(fullPrice, rate)
+    let formmatedPrice = formatPriceTo('USD', fullPriceWithRate)
+    console.log(`Total is: ${formmatedPrice}`)
+    while (balanceUSD >= fullPriceWithRate) {
+        balanceUSD -= fullPriceWithRate
+        console.log('bought!')
+        console.log(balanceUSD)
+    }
+    console.log('No more money! ' + balanceUSD + ' has left')
+}
