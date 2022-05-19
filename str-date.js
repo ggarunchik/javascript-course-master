@@ -97,3 +97,5 @@ function getRandomInt(min, max) {
 let todayDate = new Date()
 
 console.log(`текущая дата: ${todayDate.getMonth()}/${todayDate.getFullYear()}/${todayDate.getDay()}. Текущее время ${todayDate.getHours()}:${todayDate.getMinutes()}:${todayDate.getSeconds()}.`)
+
+//Test commit
